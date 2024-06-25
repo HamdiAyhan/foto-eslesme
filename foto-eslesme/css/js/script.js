@@ -14,29 +14,54 @@ const kartTemplate = `
         </div>
     </div>
 `;
-
-let randomNum = function(){
+ let randomSon = []
     let randomArray = [];
+let randomNum = function(){
+  
     for (let i = 0; i < 8; i++){
        let randomNumbers = Math.floor(Math.random() * 99);
-        randomArray.push(randomNumbers, randomNumbers);
-        if (randomArray.length > 6) break;
-    }
+            randomArray.push( randomNumbers , randomNumbers);
+     
+        if (randomArray.length > 7) break;
+    }  
+    let sayi = randomSon.length
+    for(i=0; i<8; i++){
+
+  randomIndex= Math.floor(Math.random()* randomArray.length)
+    const randomEleman =randomArray[randomIndex]
+    randomSon.push(randomArray[randomIndex])
+     randomArray.splice(randomIndex , 1)
+}
+//   if (randomSon.length === 0){
+ 
+  
+//     }else if (randomSon.length!==0 && randomSon.includes(randomIndex)){
+//         randomIndex= Math.floor(Math.random()* randomArray.length)
+//         const randomEleman =randomArray[randomIndex]
+//         randomSon.push(randomArray[randomIndex])
+
+//     }
+    
+    // for(i=0; i <randomArray.length ; i++){} 
+
+    
+   
+ 
   
     return randomArray
-    console.log(randomArray)
+     
 };
-
-
+randomNum()
+console.log(randomArray)
+ console.log(randomSon)
 /*
 Görev 2: Bu numaraları 1-99 arası(1 ve 99 dahil) sayılardan rastgele 4 çift oluşturacak şekilde üreten bir fonksiyon yazarak, kod bloğundaki array değerini bu fonksiyondan dönen array ile değiştiren kodları yazın
 */
-const fotoNumaralari = [10, 20, 30, 20, 10, 40, 40, 30];
+const fotoNumaralari = [10, 20, 30, 20, 10, 40, 40, 30, 88, 23, 99 , 33 ,88 , 33 ,99 ,23];
 
 
-console.log(fotoNumaralari);
 
-for (fotoNumara of fotoNumaralari) {
+for (fotoNumara of randomSon) {
     const yenikart = document.createElement("div");
     yenikart.innerHTML = kartTemplate;
     yenikart.classList.add("kart");
@@ -116,7 +141,8 @@ function kartTiklama(olay) {
           openModal();
             setTimeout(closeModal, 5000);
         }
-
+         /*tam ekran modal oluşturdum ve puan 4 olduğunda opanmodal fonksiyonunu çağırıyor stilden default none olan dislayi block a çeviriyor 
+         daha sonra settimeout 5 saniye sonra close modal fonksiyonunu çağırıyor o da tekrar displayi none a çeviriyor 
       /*
             Görev 1: Kullanıcı 4 kartı da eşleştirdiğinde sayfa ortasında beliren hareketli gif dosyası formatında bir kutlama görseli belirsin ve bu fotoğraf 5 saniye sonra ortadan kaybolsun.
         */
