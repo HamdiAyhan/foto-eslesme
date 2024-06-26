@@ -31,22 +31,7 @@ let randomNum = function(){
     randomSon.push(randomArray[randomIndex])
      randomArray.splice(randomIndex , 1)
 }
-//   if (randomSon.length === 0){
- 
-  
-//     }else if (randomSon.length!==0 && randomSon.includes(randomIndex)){
-//         randomIndex= Math.floor(Math.random()* randomArray.length)
-//         const randomEleman =randomArray[randomIndex]
-//         randomSon.push(randomArray[randomIndex])
 
-//     }
-    
-    // for(i=0; i <randomArray.length ; i++){} 
-
-    
-   
- 
-  
     return randomArray
      
 };
