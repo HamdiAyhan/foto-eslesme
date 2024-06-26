@@ -2,7 +2,6 @@ let puanText = document.getElementById('puanText');
 puan = 0;
 
 puanText.innerHTML = "0"
-
 const kartTemplate = `
     <div class="kart-cerceve">
         <div class="kart-onyuz">
